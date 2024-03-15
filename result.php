@@ -1,9 +1,12 @@
 <?php
 
 $paragraph = $_GET['paragraph'];
+$paragraphLenght = strlen($paragraph);
+
 $badWords = $_GET['badWords'];
 
 $paragraphCensured = str_ireplace($badWords, '***', $paragraph);
+$paragraphCensuredLenght = strlen($paragraphCensured);
 
 ?>
 <!DOCTYPE html>
@@ -22,11 +25,17 @@ $paragraphCensured = str_ireplace($badWords, '***', $paragraph);
 
         <h1 class="fs-1 text-center mt-5 mb-5">PHP Badwords</h1>
         
-        <span class="fs-3">Paragrafo Originale:</span>
-        <p class="mt-3 mb-5"><?php echo $paragraph ?></p>
+        <div class="original">
+            <span class="fs-3">Paragrafo Originale:</span><br>
+            <span class="fs-6 mt-3">lunghezza: <?php echo $paragraphLenght ?> caratteri</span>
+            <p class="mt-3 mb-5"><?php echo $paragraph ?></p>
+        </div>
 
-        <span class="fs-3">Paragrafo Cesurato:</span>
-        <p class="mt-3"><?php echo $paragraphCensured ?></p>
+        <div class="censured">
+            <span class="fs-3">Paragrafo Cesurato:</span><br>
+            <span class="fs-6 mt-3">lunghezza: <?php echo $paragraphCensuredLenght ?> caratteri</span>
+            <p class="mt-3"><?php echo $paragraphCensured ?></p>
+        </div>
 
     </div>
 
