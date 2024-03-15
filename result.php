@@ -27,13 +27,13 @@ $paragraphCensuredLenght = strlen($paragraphCensured);
         
         <div class="original">
             <span class="fs-3">Paragrafo Originale:</span><br>
-            <span class="fs-6 mt-3">lunghezza: <?php echo $paragraphLenght ?> caratteri</span>
+            <span class="fs-6 mt-3">Lunghezza: <?php echo $paragraphLenght ?> caratteri</span>
             <p class="mt-3 mb-5"><?php echo $paragraph ?></p>
         </div>
 
         <div class="censured">
-            <span class="fs-3">Paragrafo Cesurato:</span><br>
-            <span class="fs-6 mt-3">lunghezza: <?php echo $paragraphCensuredLenght ?> caratteri</span>
+            <span class="fs-3">Paragrafo Censurato:</span><br>
+            <span class="fs-6 mt-3">Lunghezza: <?php echo $paragraphCensuredLenght ?> caratteri</span>
             <p class="mt-3"><?php echo $paragraphCensured ?></p>
         </div>
 
